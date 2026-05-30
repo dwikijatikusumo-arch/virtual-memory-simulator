@@ -1,0 +1,24 @@
+services:
+  backend:
+    build: ./backend
+    container_name: memory-simulator-backend
+    ports:
+      - "8000:8000"
+    networks:
+      - sim-network
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    container_name: memory-simulator-frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    networks:
+      - sim-network
+    restart: unless-stopped
+
+networks:
+  sim-network:
+    driver: bridge
