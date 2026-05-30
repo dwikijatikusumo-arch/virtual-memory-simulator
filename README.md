@@ -2,6 +2,8 @@
 
 Simulator manajemen memori virtual untuk pembelajaran Sistem Operasi.
 
+![Simulator Tampilan](screenshot.png)
+
 Aplikasi ini menampilkan simulasi algoritma page replacement:
 - FIFO
 - LRU
